@@ -1,0 +1,281 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #6a11cb;
+  --secondary-color: #2575fc;
+  --background-color: #121212;
+  --surface-color: #1e1e1e;
+  --text-color: #ffffff;
+  --text-secondary-color: #a0a0a0;
+  --online-color: #4CAF50;
+  --offline-color: #F44336;
+}
+
+.wifi-connector-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+}
+
+.wifi-card {
+  background-color: var(--surface-color);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.wifi-card:hover {
+    transform: translateY(-5px);
+}
+
+.wifi-card-header h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wifi-card-header h2 svg {
+    margin-left: 10px;
+}
+
+.wifi-ssid {
+  color: var(--text-secondary-color);
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-secondary-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background-color: #2a2a2a;
+  color: var(--text-color);
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
+}
+
+.form-group input::placeholder {
+  color: #555;
+}
+
+.show-password-button {
+  position: absolute;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--text-secondary-color);
+  cursor: pointer;
+  padding: 0;
+  font-size: 20px;
+}
+
+.connect-button,
+.disconnect-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.connect-button:hover,
+.disconnect-button:hover {
+  box-shadow: 0 0 20px rgba(37, 117, 252, 0.5);
+  transform: translateY(-2px);
+}
+
+.connect-button:disabled {
+  background: #444;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.disconnect-button {
+  background: #c0392b;
+  margin-top: 25px;
+}
+
+.disconnect-button:hover {
+    background: #e74c3c;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+}
+
+.network-list {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+.network-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #2a2a2a;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+}
+
+.network-item:hover {
+  background-color: #3a3a3a;
+  transform: translateX(5px);
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: var(--text-secondary-color);
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.back-button:hover {
+  color: var(--text-color);
+}
+
+.iot-device-list {
+  text-align: left;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.iot-device {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  background-color: #2a2a2a;
+  transition: all 0.3s ease;
+}
+
+.iot-device:hover {
+    transform: translateX(5px);
+}
+
+.iot-device.online {
+  border-left: 5px solid var(--online-color);
+}
+
+.iot-device.offline {
+  border-left: 5px solid var(--offline-color);
+}
+
+.device-info {
+  display: flex;
+  align-items: center;
+}
+
+.device-info > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.device-icon {
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.device-name {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.device-details {
+  color: var(--text-secondary-color);
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.device-status {
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.online .device-status {
+    background-color: var(--online-color);
+    color: #fff;
+}
+
+.offline .device-status {
+    background-color: var(--offline-color);
+    color: #fff;
+}
+
+/* For the scrollbars */
+.iot-device-list::-webkit-scrollbar,
+.network-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.iot-device-list::-webkit-scrollbar-track,
+.network-list::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+.iot-device-list::-webkit-scrollbar-thumb,
+.network-list::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 10px;
+    border: 2px solid #1e1e1e;
+}
